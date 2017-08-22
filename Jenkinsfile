@@ -22,7 +22,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo '=== Build Started'
+                echo '=== Build Started '
                 sh './gradlew clean build'
             }
         }
