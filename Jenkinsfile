@@ -23,7 +23,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo '=== Build Started'
-                gradlew clean build
+                sh './gradlew clean build'
             }
         }
         stage('Test') {
