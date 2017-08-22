@@ -22,7 +22,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo '=== Build Started'
+                gradle clean build
             }
         }
         stage('Test') {

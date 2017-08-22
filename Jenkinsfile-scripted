@@ -1,0 +1,7 @@
+// For more advanced usage with Scripted Pipeline, the example above node is a crucial
+// first step as it allocates an executor and workspace
+// for the Pipeline. In essence, without node, a Pipeline cannot do any work!
+node {
+    // First step is to checkout from the SCM.
+    checkout scm
+}
