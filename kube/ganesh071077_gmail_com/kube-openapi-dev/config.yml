@@ -1,0 +1,61 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: key.pem
+    server: https://169.46.7.238:28383
+  name: kube-openapi-dev
+contexts:
+- context:
+    cluster: kube-openapi-dev
+    namespace: pnc-build
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: build
+- context:
+    cluster: kube-openapi-dev
+    namespace: pnc-prod-cb
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: cb
+- context:
+    cluster: kube-openapi-dev
+    namespace: default
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: default
+- context:
+    cluster: kube-openapi-dev
+    namespace: pnc-prod-hb
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: hb
+- context:
+    cluster: kube-openapi-dev
+    namespace: ibm-system
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: ibm-system
+- context:
+    cluster: kube-openapi-dev
+    namespace: default
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: kube-openapi-dev
+- context:
+    cluster: kube-openapi-dev
+    namespace: kube-system
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: kube-system
+- context:
+    cluster: kube-openapi-dev
+    namespace: pnc-test
+    user: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  name: test
+current-context: test
+kind: Config
+preferences: {}
+users:
+- name: https://iam.ng.bluemix.net/kubernetes#ganesh071077@gmail.com
+  user:
+    auth-provider:
+      config:
+        client-id: bx
+        client-secret: bx
+        id-token: eyJraWQiOiIyMDE3MDUxNS0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJodHRwczovL2lhbS5uZy5ibHVlbWl4Lm5ldC9rdWJlcm5ldGVzIiwic3ViIjoiZ2FuZXNoMDcxMDc3QGdtYWlsLmNvbSIsImF1ZCI6ImJ4IiwiZXhwIjoxNTAzOTQ0ODU4LCJpYXQiOjE1MDM5NDEyNTh9.Nn789TlYh8AarB5bnChlA2pGh_Pasfahk6fGcth9ZDZt8hyV3MtS8pCnHR-r1dAF_HztSM2Uxs2mqcHufdkwItAkwR8woc4NfDjFG-NnVkblUdzIWDNTJRLJnLVHoUra6SgWFFeypsn2IIQny0TCsKVWlF3UcB7fcmX2QdCGZqu7WIO6zkDVU_JBHCW6pNVjSMdLM54j4mf0-09VBcnuBeA6W73gqfmH01mJMXARLzW_HpV5Ud81hBlO9VEOfpH8CzTS-a_D8ZsEDlnO2ZNhgALfT5Mh7s7hVfIPbmVLJi9z6rwy9plOisOpJ75oTtouYXJLt6Rx8Acm8fK0IFrk4A
+        idp-issuer-url: https://iam.ng.bluemix.net/kubernetes
+        refresh-token: W0f2RuR8gwx_quqhy4vdhGr3XsEauV6YOM-QsQPWu9AjBXvLRBuxugnJrGqoRFr2vvYSJrwT38KkkXpizrLuK29oBg7nnSOtLbSzwsnuiBChfwmt-mwlaaV-UWZLgkpUT8s4-OcI2GcMqNP8wfu152K_JcjbHL7-UHDyxC9KaX9R-jZG9qfBDMNhgg_RfEYRS0JZ-qEQDmLODe9nkry6ElFxQZeQ8EqL-RqW7NfPcc3EOnQo-cbdh-FDBMjGRmXKAq5lLxA1XpvByI0YLCCc_HjBJgRFK9sWRHg3Yvs-t7w7DaZwVepz21EVuOu8SxO73chdgasng2e6omR2Z7kvoc9kV5R4Zqky7kBv_eDnYIPYVfpN4rV-1miEdfKbUgWBEQLPWIJ8-wdrvLq2bohPxotw9j8yAzsNp_ff5OKylAETpCYzbZaRkdW2DfN2v7js44PwOWRNMpTtwI_JVKBisUjYANt6H0RTX4hJSCSaCcVPe-x_2eAOrE58wxfUu0_BAwUyWv6XKxt7d9WugkDC1em9NOgfU0uLflXwzqlOHtebFpvfgFq6-tvg88XSkwHR7T9j7OVOanb6QMT89Po5IFdKfBK432FBoFhJg1TX3EyC4g==
+      name: oidc
